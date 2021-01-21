@@ -1,0 +1,40 @@
+{
+  "home-client": [
+    {
+      "id": 1,
+      "category": "comedy",
+      "items": [
+        {
+          "id": 1,
+          "title": "Calon Bini",
+          "image": "calon-bini.jpeg"
+        }
+      ]
+    }
+  ],
+
+  "home-server": [
+    {
+      "id": 1,
+      "title": "Calon Bini",
+      "image": "calon-bini.jpeg",
+      "category": "comedy"
+    }
+  ],
+
+  "detail": {
+    "title": "Calon Bini",
+    "year": 2019,
+    "duration": "1h 35m",
+    "category": "comedy",
+    "director": "Asep Kusdinar",
+    "description": "Didorong ambisi dan keserakahannya",
+    "related": [
+      {
+        "id": 2,
+        "title": "Yowes Ben The Series",
+        "image": "yowes-ben-the-series.jpag"
+      }
+    ]
+  }
+}
