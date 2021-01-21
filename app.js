@@ -1,10 +1,6 @@
-import fastify from "fastify";
-import { fileURLToPath } from "url";
-import { dirname, join } from "path";
-import Autoload from "fastify-autoload";
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const fastify = require("fastify");
+const Autoload = require("fastify-autoload");
+const path = require("path");
 
 function build() {
   const app = fastify({
@@ -12,15 +8,15 @@ function build() {
   });
 
   app.register(Autoload, {
-    dir: join(__dirname, "routes"),
+    dir: path.join(__dirname, "routes"),
   });
 
   app.register(Autoload, {
-    dir: join(__dirname, "plugins"),
+    dir: path.join(__dirname, "plugins"),
   });
 
   return app;
 }
 
 build().listen(3000);
-export default build;
+module.exports = build;
